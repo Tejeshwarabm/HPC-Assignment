@@ -1,10 +1,10 @@
-#Team members details: 
+# Team members details: 
 `1. Tejeshwara B M`
-`CSE `
+    `CSE `
 `2. Rashmi R`
-`CSE-IS (M.Tech by Research)`
+    `CSE-IS (M.Tech by Research)`
 
-##Simultors used: 
+## Simultors used: 
 
 ## For MIPS, QtSpim simultor has been used.
 ## For x86, MASM and emu8086 simultors have been used. 
