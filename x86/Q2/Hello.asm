@@ -1,0 +1,17 @@
+;Hello world program
+;Tejeshwar.B.M & Rashmi.R
+;07/08/2016
+
+
+.MODEL	SMALL
+.DATA
+STR	DB	"Hello World"
+.STACK
+.CODE
+MOV	AX,@DATA
+MOV	DS,AX
+LEA	DX,STR
+MOV	AH,09
+INT	21H
+MOV	AH,4CH
+END

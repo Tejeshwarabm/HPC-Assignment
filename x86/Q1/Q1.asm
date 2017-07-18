@@ -1,0 +1,23 @@
+; Add 2 constant and store
+;Tejeshwara.B.M & Rashmi.R
+; 06/08/2016
+
+
+.MODEL	SMALL
+
+.DATA
+A	DD	33442211H
+B	DD	23431312H
+C	DD	?
+.STACK
+.CODE
+MOV	AX,@DATA
+MOV	DS,AX
+MOV	BX,A
+MOV	CX,B
+ADD	BX,CX
+MOV	DX,BX
+MOV	BX,A
+MOV AH,4CH
+INT	21H
+END

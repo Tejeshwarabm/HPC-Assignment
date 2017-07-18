@@ -1,0 +1,166 @@
+
+;character representation of a number
+; Tejeshwara.B.M & Rashmi.R
+; 07/08/2016
+
+.DATA
+ 
+ NUMBER  DB "The equivalent word conversion from the number 1947 is: $"
+ ONE     DB    "ONE$" 
+ TWO     DB    "TWO$"
+ THREE   DB    "THREE$"
+ FOUR    DB    "FOUR$"
+ FIVE    DB    "FIVE$"   
+ SIX     DB    "SIX$" 
+ SEVEN   DB    "SEVEN$"
+ EIGHT   DB    "EIGHT$"  
+ NINE    DB    "NINE$" 
+ SPACE DB 32,"$"
+
+ NEWLINE1 DB 10,13,"$"
+
+
+.CODE 
+
+MAIN PROC 
+    
+  MOV AX,DATA
+  MOV DS,AX  
+        
+        
+  MOV AH,09H
+  MOV DX,OFFSET NUMBER
+  INT 21H
+
+MOV BX,10
+MOV AX,1947
+CALL RECP
+
+ MOV AH,4CH
+ INT 21H 
+
+
+MAIN ENDP 
+
+
+RECP PROC
+XOR DX,DX
+DIV BX 
+PUSH DX
+CMP AX,0
+JZ RECE  
+CALL RECP
+
+ 
+RECE: POP AX
+      CALL PRINTN 
+      MOV AH,09H
+      LEA DX,SPACE
+      INT 21H 
+      RET
+ 
+    
+  
+RECP ENDP  
+
+
+
+PRINTN PROC
+    
+CMP AX,1
+JZ L1  
+
+CMP AX,2
+JZ L2  
+
+ CMP AX,3
+JZ L3  
+
+ CMP AX,4
+JZ L4
+
+ CMP AX,5
+JZ L5
+
+ CMP AX,6
+JZ L6
+
+ CMP AX,7
+JZ L7 
+
+ CMP AX,8
+JZ L8
+
+ CMP AX,9
+JZ L9
+
+L1:  MOV AX,DATA
+   MOV DS,AX
+   MOV AH,09H
+   MOV DX,OFFSET ONE
+   INT 21H 
+   RET
+
+L2:  MOV AX,DATA
+   MOV DS,AX
+   MOV AH,09H
+   MOV DX,OFFSET TWO
+   INT 21H
+   RET
+ 
+L3:  MOV AX,DATA
+   MOV DS,AX
+    MOV AH,09H
+   MOV DX,OFFSET THREE
+   INT 21H
+   RET
+      
+L4: MOV AX,DATA
+   MOV DS,AX
+   MOV AH,09H
+   MOV DX,OFFSET FOUR
+   INT 21H
+   RET        
+
+L5:   MOV AX,DATA
+   MOV DS,AX
+   MOV AH,09H
+   MOV DX,OFFSET FIVE
+   INT 21H
+   RET
+   
+
+ L6: MOV AX,DATA
+   MOV DS,AX
+    MOV AH,09H
+   MOV DX,OFFSET SIX
+   INT 21H 
+   RET
+   
+
+ L7:MOV AX,DATA
+   MOV DS,AX
+   MOV AH,09H
+   MOV DX,OFFSET SEVEN
+   INT 21H
+   RET
+    
+ L8:MOV AX,DATA
+   MOV DS,AX
+   MOV AH,09H
+   MOV DX,OFFSET EIGHT
+   INT 21H
+   RET
+   
+ L9:  MOV AX,DATA
+   MOV DS,AX
+   MOV AH,09H
+   MOV DX,OFFSET NINE
+   INT 21H   
+   RET
+       
+    
+    
+PRINTN ENDP
+
+END MAIN
