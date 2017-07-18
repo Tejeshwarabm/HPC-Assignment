@@ -4,10 +4,14 @@
 `2. Rashmi R`
     `CSE-IS (M.Tech by Research)`
 
+## Course Code: CS702
+
 ## Simultors used: 
 
-## For MIPS, QtSpim simultor has been used.
-## For x86, MASM and emu8086 simultors have been used. 
+### MIPS --> QtSpim simultor.
+### x86  --> MASM and emu8086 simultors. 
+
+
 
 
 ### Programing Questions:
