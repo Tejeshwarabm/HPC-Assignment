@@ -1,16 +1,16 @@
-Team members details: 
-1. Tejeshwara B M
-CSE 
-2. Rashmi R
-CSE-IS (M.Tech by Research)
+#Team members details: 
+`1. Tejeshwara B M`
+`CSE `
+`2. Rashmi R`
+`CSE-IS (M.Tech by Research)`
 
-Simultors used: 
+##Simultors used: 
 
-For MIPS, QtSpim simultor has been used.
-For x86, MASM and emu8086 simultors have been used. 
+## For MIPS, QtSpim simultor has been used.
+## For x86, MASM and emu8086 simultors have been used. 
 
 
-Programing Questions:
+### Programing Questions:
 
 Write the MIPS-I and x86 assembly code to perform these tasks.
 1. Load two 32b constants into two registers. Add them and store the sum in a third register.
@@ -38,12 +38,6 @@ Stop the program when a negative number is entered.
 * test prime(n) - Return 1 if n is prime, else 0.
 * main - Iterates over integers, testing if each is prime. Print the first 100 numbers that are prime.
 
-10. A recursive program for solving the classic mathematical recreation, the Towers of Hanoi puzzle. The puzzle
-consists of three pegs (1, 2, and 3) and n disks (the number n can vary; typical values might be in the range
-from 1 to 8). Disk 1 is smaller than disk 2, which is in turn smaller than disk 3, and so forth, with disk n being
-the largest. Initially, all the disks are on peg 1, starting with disk n on the bottom, disk n-1 on top of that, and
-so forth, up to disk 1 on the top. The goal is to move all the disks to peg 2. You may only move one disk at a
-time, that is, the top disk from any of the three pegs onto the top of either of the other two pegs. Moreover,
-there is a constraint: You must not place a larger disk on top of a smaller disk.
-The C program below can be used to help write your assembly language program.
+10. A recursive program for solving the classic mathematical recreation, the Towers of Hanoi puzzle. 
+
 
